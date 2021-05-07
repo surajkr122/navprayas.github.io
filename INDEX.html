@@ -1,0 +1,160 @@
+<!Doctype Html>
+<Html>
+
+<Head>
+  <link rel="stylesheet" href="style.css">
+  <Title>
+    SURAJ KUMAR
+  </Title>
+
+
+</Head>
+
+<Body>
+
+  <!-- <ul align="center">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+
+    </ul> -->
+
+  <button class="tablink" onclick="openPage('Home', this, 'red')" id="defaultOpen">Home</button>
+  <button class="tablink" onclick="openPage('About', this, 'green')">About</button>
+  <button class="tablink" onclick="openPage('Resume', this, 'blue')">Resume</button>
+  <button class="tablink" onclick="openPage('Contact', this, 'orange')">Contact</button>
+
+  <div id="Home" class="tabcontent">
+    <div class="hero-image">
+      <div class="hero-text">
+        <h1>I am Suraj Kumar</h1>
+        <p>And I'm a Tech enthusiast. <br>I love competiting coding</p>
+        
+      </div>
+    </div>
+  </div>
+
+  <div id="About" class="tabcontent">
+    <div class="containers">
+
+      <div class="image">
+        <img src="/images/suraj photo.jpg" width="700px" height="500px">
+      </div>
+      <div class="text">
+        <h3 class="about_me">
+          Name : Suraj Kumar <br> Email : surajkmrsuraj650@gmail.com<br> Age : 20 <br> Degree : bachelor of technology
+          in Computer science
+        </h3>
+        <h2>Skills..</h2>
+        <h3>1. c <br>2. Python <br>3. java <br>4. cpp</h3> <br>
+        <h3>I can also code in PHP </h3>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="Resume" class="tabcontent">
+    <div class="row1">
+      <div class="column1">
+        <h2 style="color: white; text-align: center;">My Education..</h1>
+        <h3>High School(2015-2017)</h2>
+        <h4 style="color: azure; margin: 10px;">Manas Vidyalaya <br>10 C.G.P.A <br>C.B.S.E 10th Board</h3>
+        <h3>Senior Secondary(2017-2019)</h2>
+        <h4 style="color: azure; margin: 10px;">Pragya Bharti Public School <br>66.4% <br>C.B.S.E 12th Board</h3>
+        <h3>bachelor of technology in computer science(2019-2023)</h2>
+        <h4 style=" margin: 10px;">Netaji Subhash Engineering College<br>MAKAUT<br>1st Semester</h3>
+        <h5 style="color: azure; margin: 20px;"> 6.94 C.G.P.A</h4>
+        <h4 style="margin: 10px;">2nd Semester</h3>
+        <h5 style="color: azure; margin: 20px;">9.66 C.G.P.A</h4>
+        <h4 style="margin: 10px;">3rd Semester</h3>
+        <h5 style="color: azure; margin: 20px;">9.59 C.G.P.A</h4>
+      </div>
+      <div class="column1">
+        <h2 style="color: white; text-align: center;">My Work Experience</h1>
+          <h3>Avenir(Annual Tech Fest of NSEC )</h3>
+          <h4  style="color: azure; margin: 20px;">volunteer in the FIFA Game Event </h4>
+          <h3>Developer Students Club</h3>
+          <h4 style="color: azure; margin: 20px;">Active Member of Developer Student club</h4>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div id="Contact" class="tabcontent">
+    <div class="container">
+      <div style="text-align:center">
+        <h2>Contact Me</h2>
+        <p>Swing by for a cup of coffee, or leave us a message:</p>
+      </div>
+      <div class="row">
+        <h3> Social Media Profiles</h3>
+        <div class="column">
+          <a target="_blank" href="https://www.instagram.com/its_suraj_arya/">
+            <img src="images/instagram.jpg" width="50px" style="margin: 20px;">
+          </a>
+          <a target="_blank" href="https://www.facebook.com/profile.php?id=100039115043539">
+            <img src="images/fb_icon_325x325.png" width="50px" style="margin: 20px;">
+            <a target="_blank" href="https://www.linkedin.com/in/suraj-kumar-497372195/">
+              <img src="images/linkdin.jpg" width="50px" style="margin: 20px;">
+              <br>
+              <img src="/images/CONTACT US PHOTO.jpg" width="500px">
+            </a>
+        </div>
+        <div class="column">
+          <form action="/action_page.php">
+            <label for="fname"> Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+            <label for="country">Country</label>
+            <select id="country" name="country">
+              <option value="australia">Australia</option>
+              <option value="canada">Canada</option>
+              <option value="usa">USA</option>
+              <option value="india">India</option>
+            </select>
+            <!-- <label class="column" for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email.." > -->
+
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openPage(pageName, elmnt, color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+  </script>
+
+
+  <script>
+    function myFunction(x) {
+      x.classList.toggle("change");
+    }
+  </script>
+</Body>
+
+</Html>
+
+
+
+</html>
